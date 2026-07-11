@@ -226,7 +226,7 @@ function App() {
             </div>
 
             <div style={{ marginTop: '60px' }}>
-              <button className="btn" style={{ maxWidth: '300px' }} onClick={() => quizRef.current?.scrollIntoView({ behavior: 'smooth' })}>
+              <button className="btn" style={{ maxWidth: '400px' }} onClick={() => quizRef.current?.scrollIntoView({ behavior: 'smooth' })}>
                 Tìm hiểu chuyên ngành phù hợp <ChevronRight size={20} style={{ display: 'inline', verticalAlign: 'middle' }}/>
               </button>
             </div>
