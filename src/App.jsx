@@ -86,7 +86,14 @@ function App() {
     <div className="app-container">
       {/* Hero Section */}
       <header className="hero">
-        <h1><span>FPT PolySchool Cần Thơ</span><br/>Tra cứu điểm & Tư vấn tuyển sinh</h1>
+        <h1>
+          <span>FPT PolySchool Cần Thơ</span><br/>
+          <span style={{ display: 'block', fontSize: '1rem', fontWeight: '500', color: '#666', marginTop: '5px', marginBottom: '10px' }}>
+            <MapPin size={16} style={{ display: 'inline', verticalAlign: 'text-bottom', marginRight: '4px', color: '#f26522' }}/>
+            Đường số 22, KDC Hoàng Quân, P. Cái Răng, TP. Cần Thơ
+          </span>
+          Tra cứu điểm & Tư vấn tuyển sinh
+        </h1>
         <p>Hành trang vững bước tương lai. Tra cứu điểm chuẩn lớp 10 năm 2025 và dự báo điểm chuẩn 2026 ngay hôm nay.</p>
       </header>
 
