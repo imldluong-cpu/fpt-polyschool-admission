@@ -27,7 +27,16 @@ export const highSchools = [
   { id: 25, name: "THPT Thuận Hưng", score: 13.25 },
   { id: 26, name: "THCS và THPT Thới Thuận", score: 13.05 },
   { id: 27, name: "THCS và THPT Tân Lộc", score: 10.10 },
-  { id: 28, name: "Trường THPT chuyên Lý Tự Trọng", score: 31.95 },
+  { id: 28, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Toán", score: 31.95 },
+  { id: 90, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Vật lí", score: 32.90 },
+  { id: 91, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Hóa học", score: 37.80 },
+  { id: 92, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Sinh học", score: 37.46 },
+  { id: 93, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tin học", score: 34.15 },
+  { id: 94, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Ngữ văn", score: 32.25 },
+  { id: 95, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Lịch sử", score: 28.60 },
+  { id: 96, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Địa lí", score: 31.30 },
+  { id: 97, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Anh", score: 38.05 },
+  { id: 98, name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Pháp", score: 34.44 },
   
   // Bổ sung Hậu Giang - Sóc Trăng (từ 3 hình mới)
   { id: 29, name: "THPT Vị Thanh", score: 7.5 },
