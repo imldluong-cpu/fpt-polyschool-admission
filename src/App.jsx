@@ -348,7 +348,7 @@ function App() {
         <a href="https://zalo.me/0974680024" target="_blank" rel="noopener noreferrer" className="float-btn zalo-btn" title="Chat Zalo">
           <div style={{ fontWeight: 'bold', color: 'white', fontSize: '14px', letterSpacing: '0.5px' }}>Zalo</div>
         </a>
-        <a href="https://www.facebook.com/fptpolyschoolcantho" target="_blank" rel="noopener noreferrer" className="float-btn messenger-btn" title="Facebook / Messenger">
+        <a href="https://m.me/fptpolyschoolcantho" target="_blank" rel="noopener noreferrer" className="float-btn messenger-btn" title="Facebook / Messenger">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" alt="Messenger" width="34" height="34" />
         </a>
       </div>
