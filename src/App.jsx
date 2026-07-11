@@ -154,20 +154,16 @@ function App() {
             <div className="intro-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
               
               {/* Box 1: Nổi bật */}
-              <div className="feature-card" style={{ borderTop: '4px solid #f26522', textAlign: 'left' }}>
+              <div className="feature-card" style={{ borderTop: '4px solid #f26522', textAlign: 'left', display: 'flex', flexDirection: 'column' }}>
                 <h3 style={{ color: '#0033a0', marginBottom: '20px', fontSize: '1.3rem', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>⭐ NỔI BẬT</h3>
-                <ul style={{ listStyle: 'none', padding: 0 }}>
-                  <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
-                    <CheckCircle size={24} color="#f26522" style={{ marginRight: '12px', minWidth: '24px' }} />
+                <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', flex: 1 }}>
+                  <li style={{ marginBottom: '25px', display: 'flex', alignItems: 'center', fontSize: '1.2rem' }}>
+                    <CheckCircle size={32} color="#f26522" style={{ marginRight: '16px', minWidth: '32px' }} />
                     <span><strong>Xét học bạ lớp 9</strong></span>
                   </li>
-                  <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
-                    <GraduationCap size={24} color="#0033a0" style={{ marginRight: '12px', minWidth: '24px' }} />
-                    <span><strong>Học 3 năm</strong> nhận bằng Cao đẳng chính quy</span>
-                  </li>
-                  <li style={{ display: 'flex', alignItems: 'center' }}>
-                    <Award size={24} color="#f26522" style={{ marginRight: '12px', minWidth: '24px' }} />
-                    <span><strong>Học bổng lên đến 50%</strong> dành cho học sinh giỏi</span>
+                  <li style={{ display: 'flex', alignItems: 'center', fontSize: '1.2rem' }}>
+                    <GraduationCap size={32} color="#0033a0" style={{ marginRight: '16px', minWidth: '32px' }} />
+                    <span><strong>Học 3 năm</strong><br/>nhận bằng Cao đẳng chính quy</span>
                   </li>
                 </ul>
               </div>
@@ -213,6 +209,14 @@ function App() {
                     <p style={{ margin: '5px 0 0 0' }}>Chuyên ngành giai đoạn cao đẳng</p>
                   </div>
                 </div>
+              </div>
+
+              {/* Box 4: Học bổng */}
+              <div className="feature-card" style={{ borderTop: '4px solid #f26522', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', backgroundColor: '#fff3ec' }}>
+                <Award size={64} color="#f26522" style={{ marginBottom: '16px' }} />
+                <h3 style={{ color: '#0033a0', fontSize: '1.5rem', marginBottom: '8px' }}>HỌC BỔNG</h3>
+                <p style={{ fontSize: '2.5rem', fontWeight: '900', color: '#f26522', margin: 0, lineHeight: '1.1' }}>LÊN ĐẾN 50%</p>
+                <p style={{ fontSize: '1.2rem', color: 'var(--text-main)', marginTop: '12px' }}>dành cho học sinh giỏi</p>
               </div>
 
             </div>
