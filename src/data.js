@@ -35,8 +35,8 @@ export const quizQuestions = [
     question: "Bạn thích làm việc với công cụ nào nhất?",
     options: [
       { text: "Bút vẽ, màu sắc, phần mềm thiết kế sáng tạo", type: "TKDH" },
-      { text: "Máy tính, mã lệnh, công nghệ mới", type: "CNTT" },
-      { text: "Bảng kế hoạch, số liệu, kỹ năng giao tiếp", type: "QTKD" }
+      { text: "Máy tính, mã lệnh, ứng dụng di động", type: "UDPM" },
+      { text: "Mạng xã hội, nội dung, chiến dịch quảng cáo", type: "DM" }
     ]
   },
   {
@@ -44,17 +44,17 @@ export const quizQuestions = [
     question: "Hoạt động nào khiến bạn cảm thấy hứng thú?",
     options: [
       { text: "Lên ý tưởng hình ảnh, thiết kế logo, banner", type: "TKDH" },
-      { text: "Giải bài toán logic, tìm lỗi sai, viết ứng dụng", type: "CNTT" },
-      { text: "Thuyết trình, bán hàng, tổ chức sự kiện", type: "QTKD" }
+      { text: "Lập trình web, phát triển phần mềm, tìm lỗi sai", type: "UDPM" },
+      { text: "Viết bài, quay video TikTok/YouTube, chạy quảng cáo", type: "DM" }
     ]
   },
   {
     id: 3,
     question: "Môi trường làm việc mơ ước của bạn là gì?",
     options: [
-      { text: "Xưởng vẽ, studio, công ty quảng cáo", type: "TKDH" },
-      { text: "Công ty công nghệ, làm việc từ xa với máy tính", type: "CNTT" },
-      { text: "Văn phòng năng động, thường xuyên gặp gỡ đối tác", type: "QTKD" }
+      { text: "Xưởng vẽ, studio, công ty thiết kế", type: "TKDH" },
+      { text: "Công ty công nghệ, làm việc từ xa với máy tính", type: "UDPM" },
+      { text: "Phòng marketing năng động, cập nhật xu hướng liên tục", type: "DM" }
     ]
   }
 ];
@@ -64,12 +64,12 @@ export const resultMapping = {
     name: "Thiết kế đồ họa",
     description: "Bạn có tính sáng tạo cao và con mắt thẩm mỹ tuyệt vời. Ngành Thiết kế đồ họa tại FPT PolySchool là lựa chọn hoàn hảo để bạn phát triển đam mê nghệ thuật."
   },
-  CNTT: {
-    name: "Công nghệ thông tin",
-    description: "Bạn thích tư duy logic và công nghệ. Ngành Công nghệ thông tin sẽ giúp bạn trở thành chuyên gia phần mềm, bắt kịp xu thế thời đại số."
+  UDPM: {
+    name: "Ứng dụng phần mềm",
+    description: "Bạn thích tư duy logic và công nghệ. Ngành Ứng dụng phần mềm sẽ giúp bạn trở thành chuyên gia lập trình, bắt kịp xu thế thời đại số."
   },
-  QTKD: {
-    name: "Quản trị kinh doanh",
-    description: "Bạn có tố chất lãnh đạo, kỹ năng giao tiếp và kinh doanh. Ngành Quản trị kinh doanh sẽ trang bị cho bạn kiến thức thực tế để trở thành nhà quản lý xuất sắc."
+  DM: {
+    name: "Digital Marketing",
+    description: "Bạn nhạy bén với xu hướng, thích giao tiếp và lan tỏa thông điệp. Digital Marketing sẽ trang bị cho bạn kỹ năng thực chiến để trở thành marketer xuất sắc."
   }
 };

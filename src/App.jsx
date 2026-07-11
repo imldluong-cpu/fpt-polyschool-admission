@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { Search, ChevronRight, CheckCircle, GraduationCap, Briefcase, Palette, Code, MapPin } from 'lucide-react';
+import { Search, ChevronRight, CheckCircle, GraduationCap, Briefcase, Palette, Code, MapPin, Award, BookOpen, Clock, Megaphone, MonitorSmartphone } from 'lucide-react';
 import './App.css';
 import { highSchools, quizQuestions, resultMapping } from './data';
 
@@ -144,30 +144,78 @@ function App() {
       {/* Intro Section */}
       {showIntro && (
         <section className="intro-section" ref={introRef}>
-          <div className="card" style={{ maxWidth: '900px', backgroundColor: 'transparent', boxShadow: 'none', border: 'none' }}>
-            <h2 style={{ fontSize: '2.5rem', color: 'var(--primary-color)', marginBottom: '16px' }}>
-              Khởi đầu mới tại FPT PolySchool
+          <div className="card" style={{ maxWidth: '1000px', backgroundColor: 'transparent', boxShadow: 'none', border: 'none' }}>
+            <h2 style={{ fontSize: '2.5rem', color: 'var(--primary-color)', marginBottom: '8px', textTransform: 'uppercase' }}>
+              Khởi đầu mới tại FPT PolySchool Cần Thơ
             </h2>
-            <p style={{ fontSize: '1.2rem', color: 'var(--text-muted)' }}>
-              Môi trường học tập hiện đại, kết hợp thực hành và kiến thức thực tiễn giúp học sinh tự tin bước vào tương lai số.
+            <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-main)', marginBottom: '30px' }}>
+              HỌC NHANH - LÀM SỚM
             </p>
             
-            <div className="intro-grid">
-              <div className="feature-card">
-                <div className="feature-icon"><CheckCircle /></div>
-                <h3>Học đi đôi với hành</h3>
-                <p>70% thời gian thực hành, làm dự án thực tế ngay từ những ngày đầu.</p>
+            <div className="intro-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
+              
+              {/* Box 1: Nổi bật */}
+              <div className="feature-card" style={{ borderTop: '4px solid #f26522', textAlign: 'left' }}>
+                <h3 style={{ color: '#0033a0', marginBottom: '20px', fontSize: '1.3rem', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>⭐ NỔI BẬT</h3>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
+                    <CheckCircle size={24} color="#f26522" style={{ marginRight: '12px', minWidth: '24px' }} />
+                    <span><strong>Xét học bạ lớp 9</strong></span>
+                  </li>
+                  <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
+                    <GraduationCap size={24} color="#0033a0" style={{ marginRight: '12px', minWidth: '24px' }} />
+                    <span><strong>Học 3 năm</strong> nhận bằng Cao đẳng chính quy</span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'center' }}>
+                    <Award size={24} color="#f26522" style={{ marginRight: '12px', minWidth: '24px' }} />
+                    <span><strong>Học bổng lên đến 50%</strong> dành cho học sinh giỏi</span>
+                  </li>
+                </ul>
               </div>
-              <div className="feature-card">
-                <div className="feature-icon"><GraduationCap /></div>
-                <h3>Đảm bảo đầu ra</h3>
-                <p>Cơ hội học chuyển tiếp lên Cao đẳng, Đại học FPT rộng mở.</p>
+
+              {/* Box 2: 3 Chuyên ngành hot */}
+              <div className="feature-card" style={{ borderTop: '4px solid #0033a0', textAlign: 'left' }}>
+                <h3 style={{ color: '#f26522', marginBottom: '20px', fontSize: '1.3rem', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>🔥 3 CHUYÊN NGÀNH HOT</h3>
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                  <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
+                    <Palette size={24} color="#0033a0" style={{ marginRight: '12px', minWidth: '24px' }} />
+                    <span>1. <strong>Thiết kế đồ họa</strong></span>
+                  </li>
+                  <li style={{ marginBottom: '15px', display: 'flex', alignItems: 'center' }}>
+                    <Megaphone size={24} color="#f26522" style={{ marginRight: '12px', minWidth: '24px' }} />
+                    <span>2. <strong>Digital Marketing</strong></span>
+                  </li>
+                  <li style={{ display: 'flex', alignItems: 'center' }}>
+                    <MonitorSmartphone size={24} color="#0033a0" style={{ marginRight: '12px', minWidth: '24px' }} />
+                    <span>3. <strong>Ứng dụng phần mềm</strong></span>
+                  </li>
+                </ul>
               </div>
-              <div className="feature-card">
-                <div className="feature-icon"><MapPin /></div>
-                <h3>Cơ sở vật chất chuẩn quốc tế</h3>
-                <p>Khuôn viên xanh, phòng máy tính hiện đại tại Cần Thơ.</p>
+
+              {/* Box 3: Lộ trình học tập */}
+              <div className="feature-card" style={{ borderTop: '4px solid #f26522', textAlign: 'left' }}>
+                <h3 style={{ color: '#0033a0', marginBottom: '20px', fontSize: '1.3rem', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>📖 LỘ TRÌNH HỌC TẬP</h3>
+                <div style={{ borderLeft: '3px solid #eaeaea', paddingLeft: '20px', marginLeft: '10px', position: 'relative' }}>
+                  <div style={{ position: 'absolute', left: '-9px', top: '2px', width: '15px', height: '15px', borderRadius: '50%', backgroundColor: '#f26522' }}></div>
+                  <div style={{ marginBottom: '20px' }}>
+                    <strong style={{ color: '#f26522' }}>Năm 1</strong>
+                    <p style={{ margin: '5px 0 0 0' }}>Văn hóa phổ thông</p>
+                  </div>
+
+                  <div style={{ position: 'absolute', left: '-9px', top: '75px', width: '15px', height: '15px', borderRadius: '50%', backgroundColor: '#0033a0' }}></div>
+                  <div style={{ marginBottom: '20px' }}>
+                    <strong style={{ color: '#0033a0' }}>Năm 2</strong>
+                    <p style={{ margin: '5px 0 0 0' }}>Chuyên ngành giai đoạn trung cấp</p>
+                  </div>
+
+                  <div style={{ position: 'absolute', left: '-9px', top: '150px', width: '15px', height: '15px', borderRadius: '50%', backgroundColor: '#f26522' }}></div>
+                  <div>
+                    <strong style={{ color: '#f26522' }}>Năm 3</strong>
+                    <p style={{ margin: '5px 0 0 0' }}>Chuyên ngành giai đoạn cao đẳng</p>
+                  </div>
+                </div>
               </div>
+
             </div>
 
             <div style={{ marginTop: '60px' }}>
@@ -213,8 +261,8 @@ function App() {
               <div className="quiz-result">
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
                   {quizResult.name === 'Thiết kế đồ họa' && <Palette size={64} color="var(--primary-color)" />}
-                  {quizResult.name === 'Công nghệ thông tin' && <Code size={64} color="var(--primary-color)" />}
-                  {quizResult.name === 'Quản trị kinh doanh' && <Briefcase size={64} color="var(--primary-color)" />}
+                  {quizResult.name === 'Ứng dụng phần mềm' && <MonitorSmartphone size={64} color="var(--primary-color)" />}
+                  {quizResult.name === 'Digital Marketing' && <Megaphone size={64} color="var(--primary-color)" />}
                 </div>
                 <h3>{quizResult.name}</h3>
                 <p style={{ fontSize: '1.1rem', marginBottom: '30px' }}>{quizResult.description}</p>
