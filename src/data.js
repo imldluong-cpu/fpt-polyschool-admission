@@ -110,7 +110,8 @@ export const highSchools = [
   { id: 104, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Văn", score: 32.30 },
   { id: 105, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sử", score: 35.60 },
   { id: 106, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Địa", score: 30.45 },
-  { id: 107, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Anh", score: 33.00 }
+  { id: 107, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Anh", score: 33.00 },
+  { id: 108, name: "THPT Ô Môn", score: 9.60 }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export const quizQuestions = [
