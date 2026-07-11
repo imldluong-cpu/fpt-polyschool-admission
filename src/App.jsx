@@ -144,7 +144,7 @@ function App() {
       {/* Intro Section */}
         <section className="intro-section" ref={introRef}>
           <div className="card" style={{ maxWidth: '1000px', backgroundColor: 'transparent', boxShadow: 'none', border: 'none' }}>
-            <h2 style={{ fontSize: '2.5rem', color: 'var(--primary-color)', marginBottom: '8px', textTransform: 'uppercase' }}>
+            <h2 style={{ fontSize: '2rem', color: 'var(--primary-color)', marginBottom: '8px', textTransform: 'uppercase' }}>
               Khởi đầu mới tại FPT PolySchool Cần Thơ
             </h2>
             <p style={{ fontSize: '1.5rem', fontWeight: 'bold', color: 'var(--text-main)', marginBottom: '30px' }}>
