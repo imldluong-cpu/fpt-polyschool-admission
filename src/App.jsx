@@ -216,7 +216,11 @@ function App() {
                 <Award size={64} color="#f26522" style={{ marginBottom: '16px' }} />
                 <h3 style={{ color: '#0033a0', fontSize: '1.5rem', marginBottom: '8px' }}>HỌC BỔNG</h3>
                 <p style={{ fontSize: '2.5rem', fontWeight: '900', color: '#f26522', margin: 0, lineHeight: '1.1' }}>LÊN ĐẾN 50%</p>
-                <p style={{ fontSize: '1.2rem', color: 'var(--text-main)', marginTop: '12px' }}>dành cho học sinh giỏi</p>
+                <p style={{ fontSize: '1.2rem', color: 'var(--text-main)', marginTop: '12px', marginBottom: '12px' }}>dành cho học sinh giỏi</p>
+                <div style={{ fontSize: '0.95rem', color: 'var(--text-muted)', lineHeight: '1.5', textAlign: 'left', display: 'inline-block' }}>
+                  <p style={{ margin: 0 }}>• ĐTB Toán, Văn, Lý, Sử từ 8.0</p>
+                  <p style={{ margin: 0 }}>• Hoặc Điểm thi 10 từ 23 điểm</p>
+                </div>
               </div>
 
             </div>
