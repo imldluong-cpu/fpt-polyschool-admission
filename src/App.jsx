@@ -5,6 +5,7 @@ import { highSchools, quizQuestions, resultMapping } from './data';
 
 function App() {
   const [selectedSchool, setSelectedSchool] = useState('');
+  const [searchText, setSearchText] = useState('');
   const [myScore, setMyScore] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
@@ -90,17 +91,24 @@ function App() {
           <form onSubmit={handleLookup}>
             <div className="form-group">
               <label>Chọn trường THPT bạn quan tâm (Năm 2025)</label>
-              <select 
+              <input 
+                type="text"
                 className="form-control"
-                value={selectedSchool}
-                onChange={(e) => setSelectedSchool(e.target.value)}
+                list="school-list"
+                placeholder="-- Nhập hoặc chọn trường --"
+                value={searchText}
+                onChange={(e) => {
+                  setSearchText(e.target.value);
+                  const found = highSchools.find(s => s.name === e.target.value);
+                  setSelectedSchool(found ? found.id : '');
+                }}
                 required
-              >
-                <option value="">-- Lựa chọn trường --</option>
+              />
+              <datalist id="school-list">
                 {highSchools.map(school => (
-                  <option key={school.id} value={school.id}>{school.name}</option>
+                  <option key={school.id} value={school.name} />
                 ))}
-              </select>
+              </datalist>
             </div>
 
             {schoolData && (
