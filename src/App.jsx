@@ -266,7 +266,7 @@ function App() {
                 </div>
                 <h3>{quizResult.name}</h3>
                 <p style={{ fontSize: '1.1rem', marginBottom: '30px' }}>{quizResult.description}</p>
-                <button className="btn" onClick={() => window.open('https://polyschool.fpt.edu.vn/', '_blank')}>
+                <button className="btn" onClick={() => window.open('https://zalo.me/0974680024', '_blank')}>
                   Đăng ký tư vấn ngay
                 </button>
                 <button 
