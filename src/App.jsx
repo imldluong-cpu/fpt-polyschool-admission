@@ -17,6 +17,25 @@ function App() {
 
   const schoolData = highSchools.find(s => s.id === Number(selectedSchool));
 
+  let predictionStatus = null;
+  let predictionColor = '';
+  if (schoolData && myScore) {
+    const userScore = Number(myScore);
+    const minPredicted = schoolData.score + 2;
+    const maxPredicted = schoolData.score + 3;
+
+    if (userScore > maxPredicted) {
+      predictionStatus = "Đạt";
+      predictionColor = "#22c55e";
+    } else if (userScore >= minPredicted && userScore <= maxPredicted) {
+      predictionStatus = "An toàn";
+      predictionColor = "#eab308";
+    } else {
+      predictionStatus = "Trượt";
+      predictionColor = "#ef4444";
+    }
+  }
+
   const handleLookup = (e) => {
     e.preventDefault();
     if (selectedSchool && myScore) {
@@ -126,8 +145,19 @@ function App() {
                 {(schoolData?.score + 2).toFixed(2)} - {(schoolData?.score + 3).toFixed(2)}
               </div>
             </div>
+
+            {predictionStatus && (
+              <div style={{ marginTop: '15px', textAlign: 'center' }}>
+                <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
+                  Dự đoán khả năng: <span style={{ color: predictionColor, padding: '4px 12px', backgroundColor: predictionColor + '20', borderRadius: '4px', display: 'inline-block', marginLeft: '8px' }}>{predictionStatus}</span>
+                </div>
+                <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '10px', fontStyle: 'italic' }}>
+                  * Thông tin mang tính chất tham khảo
+                </p>
+              </div>
+            )}
             
-            <p style={{ marginTop: '20px', fontWeight: 'bold' }}>Phụ huynh đã tìm thêm môi trường khác cho bạn chưa?</p>
+            <p style={{ marginTop: '24px', fontWeight: 'bold' }}>Phụ huynh đã tìm thêm môi trường khác cho bạn chưa?</p>
             
             <div className="modal-actions">
               <button className="btn btn-outline" onClick={() => scrollToSection(introRef)}>
