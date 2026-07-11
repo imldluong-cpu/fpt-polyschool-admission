@@ -142,7 +142,6 @@ function App() {
       )}
 
       {/* Intro Section */}
-      {showIntro && (
         <section className="intro-section" ref={introRef}>
           <div className="card" style={{ maxWidth: '1000px', backgroundColor: 'transparent', boxShadow: 'none', border: 'none' }}>
             <h2 style={{ fontSize: '2.5rem', color: 'var(--primary-color)', marginBottom: '8px', textTransform: 'uppercase' }}>
@@ -225,10 +224,8 @@ function App() {
             </div>
           </div>
         </section>
-      )}
 
       {/* Quiz Section */}
-      {showIntro && (
         <section className="quiz-section" ref={quizRef}>
           <div className="card quiz-card">
             {!quizResult ? (
@@ -284,7 +281,6 @@ function App() {
             )}
           </div>
         </section>
-      )}
     </div>
   );
 }
