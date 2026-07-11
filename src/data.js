@@ -99,7 +99,18 @@ export const highSchools = [
   { id: 86, name: "THPT Thạnh Tân", score: 18 },
   { id: 87, name: "THCS & THPT Hưng Lợi", score: 20 },
   { id: 88, name: "THPT Lịch Hội Thượng", score: 19.5 },
-  { id: 89, name: "THCS & THPT Trần Đề", score: 19 }
+  { id: 89, name: "THCS & THPT Trần Đề", score: 19 },
+  
+  // THPT Chuyên Nguyễn Thị Minh Khai
+  { id: 99, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Toán", score: 35.35 },
+  { id: 100, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Lý", score: 28.15 },
+  { id: 101, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Hóa", score: 30.35 },
+  { id: 102, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sinh", score: 30.55 },
+  { id: 103, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tin", score: 32.20 },
+  { id: 104, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Văn", score: 32.30 },
+  { id: 105, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sử", score: 35.60 },
+  { id: 106, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Địa", score: 30.45 },
+  { id: 107, name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Anh", score: 33.00 }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
 export const quizQuestions = [
