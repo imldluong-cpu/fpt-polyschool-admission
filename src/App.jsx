@@ -1,11 +1,16 @@
 import { useState, useRef } from 'react';
 import { Search, ChevronRight, CheckCircle, GraduationCap, Briefcase, Palette, Code, MapPin, Award, BookOpen, Clock, Megaphone, MonitorSmartphone } from 'lucide-react';
+import Select from 'react-select';
 import './App.css';
 import { highSchools, quizQuestions, resultMapping } from './data';
 
+const schoolOptions = highSchools.map(school => ({
+  value: school.id,
+  label: school.name
+}));
+
 function App() {
   const [selectedSchool, setSelectedSchool] = useState('');
-  const [searchText, setSearchText] = useState('');
   const [myScore, setMyScore] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
@@ -89,26 +94,36 @@ function App() {
       <section className="section-container">
         <div className="card">
           <form onSubmit={handleLookup}>
-            <div className="form-group">
-              <label>Chọn trường THPT bạn quan tâm (Năm 2025)</label>
-              <input 
-                type="text"
-                className="form-control"
-                list="school-list"
+            <div className="form-group" style={{ textAlign: 'left' }}>
+              <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#555' }}>Chọn trường THPT bạn quan tâm (Năm 2025)</label>
+              <Select
+                options={schoolOptions}
                 placeholder="-- Nhập hoặc chọn trường --"
-                value={searchText}
-                onChange={(e) => {
-                  setSearchText(e.target.value);
-                  const found = highSchools.find(s => s.name === e.target.value);
-                  setSelectedSchool(found ? found.id : '');
+                isSearchable={true}
+                value={schoolOptions.find(opt => opt.value === Number(selectedSchool)) || null}
+                onChange={(selectedOption) => {
+                  setSelectedSchool(selectedOption ? selectedOption.value : '');
                 }}
-                required
+                noOptionsMessage={() => "Không tìm thấy trường"}
+                styles={{
+                  control: (base, state) => ({
+                    ...base,
+                    padding: '4px',
+                    borderRadius: '8px',
+                    borderColor: state.isFocused ? '#f26522' : '#ddd',
+                    boxShadow: state.isFocused ? '0 0 0 1px #f26522' : 'none',
+                    '&:hover': { borderColor: '#f26522' },
+                    fontSize: '1rem'
+                  }),
+                  option: (base, state) => ({
+                    ...base,
+                    backgroundColor: state.isSelected ? '#f26522' : state.isFocused ? '#fff3ec' : 'white',
+                    color: state.isSelected ? 'white' : '#333',
+                    cursor: 'pointer',
+                    fontSize: '1rem'
+                  })
+                }}
               />
-              <datalist id="school-list">
-                {highSchools.map(school => (
-                  <option key={school.id} value={school.name} />
-                ))}
-              </datalist>
             </div>
 
             {schoolData && (
