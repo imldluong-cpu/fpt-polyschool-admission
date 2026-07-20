@@ -93,7 +93,7 @@ export const highSchools = [
     id: 16,
     name: "THPT Thực hành sư phạm - ĐHCT",
     score: 20.35,
-    quota: 400
+    quota: 216
   },
   {
     id: 17,
@@ -129,7 +129,7 @@ export const highSchools = [
     id: 22,
     name: "THPT Lương Định Của",
     score: 9.6,
-    quota: 400
+    quota: 315
   },
   {
     id: 23,
