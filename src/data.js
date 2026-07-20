@@ -595,49 +595,49 @@ export const highSchools = [
   },
   {
     id: 100,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Lý",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Vật lí",
     score: 28.15,
     quota: 350
   },
   {
     id: 101,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Hóa",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Hóa học",
     score: 30.35,
     quota: 350
   },
   {
     id: 102,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sinh",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sinh học",
     score: 30.55,
     quota: 350
   },
   {
     id: 103,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tin",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tin học",
     score: 32.2,
     quota: 350
   },
   {
     id: 104,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Văn",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Ngữ văn",
     score: 32.3,
     quota: 350
   },
   {
     id: 105,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sử",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Lịch sử",
     score: 35.6,
     quota: 350
   },
   {
     id: 106,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Địa",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Địa lí",
     score: 30.45,
     quota: 350
   },
   {
     id: 107,
-    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Anh",
+    name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tiếng Anh",
     score: 33,
     quota: 350
   },
@@ -682,6 +682,66 @@ export const highSchools = [
     name: "Trường F (Test)",
     score: 25,
     quota: 100
+  },
+  {
+    id: 110,
+    name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Trung Quốc",
+    score: 30,
+    quota: 455
+  },
+  {
+    id: 111,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Toán",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 112,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Vật lí",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 113,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Hóa học",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 114,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Sinh học",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 115,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Tin học",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 116,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Ngữ văn",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 117,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Lịch sử",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 118,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Địa lí",
+    score: 25,
+    quota: 315
+  },
+  {
+    id: 119,
+    name: "Trường THPT chuyên Vị Thanh - Chuyên Tiếng Anh",
+    score: 25,
+    quota: 315
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
