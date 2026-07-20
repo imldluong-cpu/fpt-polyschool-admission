@@ -23,22 +23,20 @@ function App() {
 
   const schoolData = highSchools.find(s => s.id === Number(selectedSchool));
 
-  let predictionStatus = null;
-  let predictionColor = '';
+  let passStatus = null;
+  let suggestedSchools = [];
   if (schoolData && myScore) {
     const userScore = Number(myScore);
-    const minPredicted = schoolData.score + 2;
-    const maxPredicted = schoolData.score + 3;
-
-    if (userScore > maxPredicted) {
-      predictionStatus = "Đạt";
-      predictionColor = "#22c55e";
-    } else if (userScore >= minPredicted && userScore <= maxPredicted) {
-      predictionStatus = "An toàn";
-      predictionColor = "#eab308";
+    if (userScore >= schoolData.score) {
+      passStatus = "Đậu";
     } else {
-      predictionStatus = "Trượt";
-      predictionColor = "#ef4444";
+      passStatus = "Rớt";
+      
+      // Suggest 2 schools with score <= userScore (excluding the selected one and test schools)
+      suggestedSchools = highSchools
+        .filter(s => s.id !== schoolData.id && s.score <= userScore && !s.name.includes("Test"))
+        .sort((a, b) => b.score - a.score) 
+        .slice(0, 2);
     }
   }
 
@@ -92,9 +90,9 @@ function App() {
             <MapPin size={16} style={{ display: 'inline', verticalAlign: 'text-bottom', marginRight: '4px', color: '#f26522' }}/>
             Đường số 22, KDC Hoàng Quân, P. Cái Răng, TP. Cần Thơ
           </span>
-          Tra cứu điểm & Tư vấn tuyển sinh
+          Tra cứu kết quả xét tuyển NV2 năm 2026
         </h1>
-        <p>Hành trang vững bước tương lai. Tra cứu điểm chuẩn lớp 10 năm 2025 và dự báo điểm chuẩn 2026 ngay hôm nay.</p>
+        <p>Hành trang vững bước tương lai. Xem ngay kết quả tuyển sinh lớp 10 năm 2026 chính xác và nhanh chóng nhất.</p>
       </header>
 
       {/* Lookup Section */}
@@ -102,7 +100,7 @@ function App() {
         <div className="card">
           <form onSubmit={handleLookup}>
             <div className="form-group" style={{ textAlign: 'left' }}>
-              <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#555' }}>Chọn trường THPT bạn quan tâm (Năm 2025)</label>
+              <label style={{ display: 'block', marginBottom: '8px', fontWeight: '500', color: '#555' }}>Chọn trường THPT NV2 của bạn</label>
               <Select
                 options={schoolOptions}
                 placeholder="-- Nhập hoặc chọn trường --"
@@ -135,7 +133,7 @@ function App() {
 
             {schoolData && (
               <div className="result-box">
-                <p>Điểm chuẩn 2025 (NV2a/NV1):</p>
+                <p>Điểm chuẩn NV2 năm 2026:</p>
                 <div className="score-display">{schoolData.score.toFixed(2)}</div>
               </div>
             )}
@@ -155,46 +153,67 @@ function App() {
 
             <button type="submit" className="btn">
               <Search size={20} style={{ display: 'inline', verticalAlign: 'middle', marginRight: '8px' }}/>
-              Đối chiếu điểm thi
+              Xem kết quả
             </button>
           </form>
         </div>
       </section>
 
-      {/* Prediction Modal */}
+      {/* Result Modal */}
       {showModal && (
         <div className="modal-overlay">
-          <div className="modal-content">
-            <h2>Dự báo điểm chuẩn 2026</h2>
-            <p>
-              Với tình hình hiện tại, dự kiến điểm chuẩn năm 2026 của <strong>{schoolData?.name}</strong> sẽ tăng khoảng <span className="prediction-highlight">2 - 3 điểm</span>.
-            </p>
+          <div className="modal-content" style={{ maxHeight: '90vh', overflowY: 'auto' }}>
+            <h2>Kết quả tuyển sinh 2026</h2>
             <div className="result-box" style={{ margin: '20px 0', textAlign: 'center', borderRadius: '8px' }}>
-              <p>Điểm dự kiến 2026 (tham khảo):</p>
-              <div className="score-display" style={{ fontSize: '2rem' }}>
-                {(schoolData?.score + 2).toFixed(2)} - {(schoolData?.score + 3).toFixed(2)}
+              <p style={{ margin: 0, fontSize: '1.1rem', color: '#666' }}>Trường {schoolData?.name}</p>
+              <div className="score-display" style={{ fontSize: '2.5rem', margin: '10px 0' }}>
+                {schoolData?.score.toFixed(2)}
               </div>
+              <p style={{ margin: 0, fontWeight: 'bold' }}>Chỉ tiêu 2026: {schoolData?.quota} học sinh</p>
             </div>
 
-            {predictionStatus && (
-              <div style={{ marginTop: '15px', textAlign: 'center' }}>
-                <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>
-                  Dự đoán khả năng: <span style={{ color: predictionColor, padding: '4px 12px', backgroundColor: predictionColor + '20', borderRadius: '4px', display: 'inline-block', marginLeft: '8px' }}>{predictionStatus}</span>
-                </div>
-                <p style={{ fontSize: '0.85rem', color: '#666', marginTop: '10px', fontStyle: 'italic' }}>
-                  * Thông tin mang tính chất tham khảo
-                </p>
+            {passStatus === "Đậu" && (
+              <div style={{ textAlign: 'center', padding: '20px', backgroundColor: '#e6ffe6', borderRadius: '8px', border: '1px solid #22c55e' }}>
+                <h3 style={{ color: '#16a34a', margin: 0, fontSize: '1.5rem' }}>🎉 CHÚC MỪNG BẠN!</h3>
+                <p style={{ marginTop: '10px', fontSize: '1.1rem' }}>Bạn đã đủ điểm trúng tuyển vào {schoolData?.name}.</p>
               </div>
             )}
             
-            <p style={{ marginTop: '24px', fontWeight: 'bold' }}>Phụ huynh đã tìm thêm môi trường khác cho bạn chưa?</p>
+            {passStatus === "Rớt" && (
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ padding: '15px', backgroundColor: '#fff0f0', borderRadius: '8px', border: '1px solid #ef4444', marginBottom: '20px' }}>
+                  <h3 style={{ color: '#dc2626', margin: 0, fontSize: '1.3rem' }}>Rất tiếc!</h3>
+                  <p style={{ marginTop: '10px' }}>Điểm thi của bạn chưa đủ để trúng tuyển vào {schoolData?.name}.</p>
+                </div>
+                
+                <h3 style={{ textAlign: 'left', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>🎯 Gợi ý trường phù hợp đăng ký NV3:</h3>
+                <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left' }}>
+                  {suggestedSchools.map((s, index) => (
+                    <li key={index} style={{ padding: '12px 15px', border: '1px solid #eaeaea', borderRadius: '8px', marginBottom: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <strong>{index + 1}. {s.name}</strong>
+                      <span style={{ color: '#f26522', fontWeight: 'bold' }}>{s.score.toFixed(2)} đ</span>
+                    </li>
+                  ))}
+                  
+                  <li style={{ padding: '15px', border: '2px solid #0033a0', backgroundColor: '#f8faff', borderRadius: '8px', marginBottom: '10px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                      <strong style={{ color: '#0033a0', fontSize: '1.1rem' }}>{suggestedSchools.length + 1}. FPT PolySchool Cần Thơ</strong>
+                      <span style={{ backgroundColor: '#f26522', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>HOT</span>
+                    </div>
+                    <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Xét học bạ lớp 9 - Nhập học ngay</p>
+                    <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Học 3 năm nhận bằng Cao đẳng</p>
+                    <p style={{ margin: 0, fontSize: '0.9rem' }}>✅ 100% sinh viên có việc làm</p>
+                  </li>
+                </ul>
+              </div>
+            )}
             
-            <div className="modal-actions">
-              <button className="btn btn-outline" onClick={() => scrollToSection(introRef)}>
-                Đã tìm
+            <div className="modal-actions" style={{ marginTop: '24px' }}>
+              <button className="btn btn-outline" onClick={() => setShowModal(false)}>
+                Đóng
               </button>
               <button className="btn" onClick={() => scrollToSection(introRef)}>
-                Chưa tìm, cần tư vấn thêm
+                Tìm hiểu thêm FPT PolySchool
               </button>
             </div>
           </div>
