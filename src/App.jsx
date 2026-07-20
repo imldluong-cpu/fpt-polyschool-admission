@@ -202,7 +202,7 @@ function App() {
                     </div>
                     <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Xét học bạ lớp 9 - Nhập học ngay</p>
                     <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Học 3 năm nhận bằng Cao đẳng</p>
-                    <p style={{ margin: 0, fontSize: '0.9rem' }}>✅ 100% sinh viên có việc làm</p>
+                    <p style={{ margin: 0, fontSize: '0.9rem' }}>✅ Chuyên ngành HOT: Học nhanh làm sớm</p>
                   </li>
                 </ul>
               </div>
