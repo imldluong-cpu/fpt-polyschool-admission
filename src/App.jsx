@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { Search, ChevronRight, CheckCircle, GraduationCap, Briefcase, Palette, Code, MapPin, Award, BookOpen, Clock, Megaphone, MonitorSmartphone } from 'lucide-react';
+import { Search, ChevronRight, CheckCircle, GraduationCap, Briefcase, Palette, Code, MapPin, Award, BookOpen, Clock, Megaphone, MonitorSmartphone, ChevronDown, ChevronUp } from 'lucide-react';
 import Select from 'react-select';
 import './App.css';
 import { highSchools, quizQuestions, resultMapping } from './data';
@@ -13,6 +13,7 @@ function App() {
   const [selectedSchool, setSelectedSchool] = useState('');
   const [myScore, setMyScore] = useState('');
   const [showModal, setShowModal] = useState(false);
+  const [showAllSuggestions, setShowAllSuggestions] = useState(false);
   const [showIntro, setShowIntro] = useState(false);
   const [currentQuiz, setCurrentQuiz] = useState(0);
   const [quizAnswers, setQuizAnswers] = useState([]);
@@ -32,17 +33,18 @@ function App() {
     } else {
       passStatus = "Rớt";
       
-      // Suggest 2 schools with score <= userScore (excluding the selected one and test schools)
+      // Suggest up to 5 schools with score <= userScore (excluding the selected one and test schools)
       suggestedSchools = highSchools
         .filter(s => s.id !== schoolData.id && s.score <= userScore && !s.name.includes("Test"))
         .sort((a, b) => b.score - a.score) 
-        .slice(0, 2);
+        .slice(0, 5);
     }
   }
 
   const handleLookup = (e) => {
     e.preventDefault();
     if (selectedSchool && myScore) {
+      setShowAllSuggestions(false);
       setShowModal(true);
     }
   };
@@ -188,16 +190,32 @@ function App() {
                 
                 <h3 style={{ textAlign: 'left', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>🎯 Gợi ý trường phù hợp đăng ký NV3:</h3>
                 <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left' }}>
-                  {suggestedSchools.map((s, index) => (
+                  {suggestedSchools.slice(0, showAllSuggestions ? 5 : 2).map((s, index) => (
                     <li key={index} style={{ padding: '12px 15px', border: '1px solid #eaeaea', borderRadius: '8px', marginBottom: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                       <strong>{index + 1}. {s.name}</strong>
                       <span style={{ color: '#f26522', fontWeight: 'bold' }}>{s.score.toFixed(2)} đ</span>
                     </li>
                   ))}
+
+                  {suggestedSchools.length > 2 && !showAllSuggestions && (
+                    <div style={{ textAlign: 'center', marginBottom: '15px' }}>
+                      <button type="button" onClick={() => setShowAllSuggestions(true)} style={{ background: 'none', border: 'none', color: '#0033a0', cursor: 'pointer', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', fontWeight: '500' }}>
+                        Xem thêm trường <ChevronDown size={16} style={{ marginLeft: '4px' }}/>
+                      </button>
+                    </div>
+                  )}
+                  {suggestedSchools.length > 2 && showAllSuggestions && (
+                    <div style={{ textAlign: 'center', marginBottom: '15px' }}>
+                      <button type="button" onClick={() => setShowAllSuggestions(false)} style={{ background: 'none', border: 'none', color: '#0033a0', cursor: 'pointer', fontSize: '0.9rem', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '100%', fontWeight: '500' }}>
+                        Thu gọn <ChevronUp size={16} style={{ marginLeft: '4px' }}/>
+                      </button>
+                    </div>
+                  )}
                   
+                  <p style={{ textAlign: 'center', fontWeight: 'bold', margin: '20px 0 10px', color: '#555', textTransform: 'uppercase', fontSize: '0.95rem' }}>BẠN CŨNG CÓ THỂ CHỌN</p>
                   <li style={{ padding: '15px', border: '2px solid #0033a0', backgroundColor: '#f8faff', borderRadius: '8px', marginBottom: '10px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
-                      <strong style={{ color: '#0033a0', fontSize: '1.1rem' }}>{suggestedSchools.length + 1}. FPT PolySchool Cần Thơ</strong>
+                      <strong style={{ color: '#0033a0', fontSize: '1.1rem' }}>FPT PolySchool Cần Thơ</strong>
                       <span style={{ backgroundColor: '#f26522', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>HOT</span>
                     </div>
                     <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Xét học bạ lớp 9 - Nhập học ngay</p>
