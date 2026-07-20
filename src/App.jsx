@@ -219,8 +219,8 @@ function App() {
                       <span style={{ backgroundColor: '#f26522', color: 'white', padding: '2px 8px', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>HOT</span>
                     </div>
                     <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Xét học bạ lớp 9 - Nhập học ngay</p>
-                    <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Học 3 năm nhận bằng Cao đẳng</p>
-                    <p style={{ margin: 0, fontSize: '0.9rem' }}>✅ Chuyên ngành HOT - Học nhanh làm sớm</p>
+                    <p style={{ margin: '0 0 5px 0', fontSize: '0.9rem' }}>✅ Học Văn hóa phổ thông kết hợp chuyên ngành</p>
+                    <p style={{ margin: 0, fontSize: '0.9rem' }}>✅ Sau 3 năm nhận bằng Cao đẳng chính quy</p>
                   </li>
                 </ul>
               </div>
