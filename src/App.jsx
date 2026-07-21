@@ -33,9 +33,9 @@ function App() {
     } else {
       passStatus = "Rớt";
       
-      // Suggest up to 5 schools with score <= userScore (excluding the selected one and test schools)
+      // Suggest up to 5 schools with score <= userScore and nv3Quota > 0 (excluding the selected one and test schools)
       suggestedSchools = highSchools
-        .filter(s => s.id !== schoolData.id && s.score <= userScore && !s.name.includes("Test"))
+        .filter(s => s.id !== schoolData.id && s.score <= userScore && s.nv3Quota > 0 && !s.name.includes("Test"))
         .sort((a, b) => b.score - a.score) 
         .slice(0, 5);
     }
@@ -192,7 +192,10 @@ function App() {
                 <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left' }}>
                   {suggestedSchools.slice(0, showAllSuggestions ? 5 : 2).map((s, index) => (
                     <li key={index} style={{ padding: '12px 15px', border: '1px solid #eaeaea', borderRadius: '8px', marginBottom: '10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <strong>{index + 1}. {s.name}</strong>
+                      <div style={{ display: 'flex', flexDirection: 'column' }}>
+                        <strong>{index + 1}. {s.name}</strong>
+                        <span style={{ fontSize: '0.85rem', color: '#666', marginTop: '4px' }}>Còn {s.nv3Quota} chỉ tiêu NV3</span>
+                      </div>
                       <span style={{ color: '#f26522', fontWeight: 'bold' }}>{s.score.toFixed(2)} đ</span>
                     </li>
                   ))}
