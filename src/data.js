@@ -2,745 +2,709 @@ export const highSchools = [
   {
     id: 1,
     name: "THPT Hà Huy Giáp",
-    score: 13,
+    score: 12,
     quota: 520
   },
   {
     id: 2,
     name: "THPT Trung An",
-    score: 13.75,
+    score: 11.9,
     quota: 504
   },
   {
     id: 3,
     name: "THCS và THPT Trần Ngọc Hoằng",
-    score: 8.5,
+    score: 25,
     quota: 225
   },
   {
     id: 4,
     name: "THPT Phan Văn Trị",
-    score: 10.6,
+    score: 13.75,
     quota: 630
   },
   {
     id: 5,
     name: "THPT Giai Xuân",
-    score: 10.5,
+    score: 8.5,
     quota: 405
   },
   {
     id: 6,
     name: "THPT Thới Lai",
-    score: 10,
+    score: 13.1,
     quota: 630
   },
   {
     id: 7,
     name: "THCS và THPT Trường Xuân",
-    score: 6.8,
+    score: 5.55,
     quota: 225
   },
   {
     id: 8,
     name: "THCS và THPT Thới Thạnh",
-    score: 7.1,
+    score: 28,
     quota: 270
   },
   {
     id: 9,
     name: "THPT Thạnh An",
-    score: 7,
+    score: 27,
     quota: 450
   },
   {
     id: 10,
     name: "THPT Vĩnh Thạnh",
-    score: 7.25,
+    score: 30,
     quota: 450
   },
   {
     id: 11,
     name: "THCS và THPT Thạnh Thắng",
-    score: 6.5,
+    score: 24,
     quota: 180
   },
   {
     id: 12,
     name: "THPT Bùi Hữu Nghĩa",
-    score: 15.05,
+    score: 20.35,
     quota: 546
   },
   {
     id: 13,
     name: "THPT Bình Thủy",
-    score: 14,
+    score: 14.7,
     quota: 675
   },
   {
     id: 14,
     name: "THPT Nguyễn Việt Dũng",
-    score: 12.4,
+    score: 15.1,
     quota: 420
   },
   {
     id: 15,
     name: "THPT Trần Đại Nghĩa",
-    score: 11.85,
+    score: 13.2,
     quota: 540
   },
   {
     id: 16,
     name: "THPT Thực hành sư phạm - ĐHCT",
-    score: 20.35,
+    score: 24,
     quota: 216
   },
   {
     id: 17,
     name: "THPT Châu Văn Liêm",
-    score: 21.3,
+    score: 23.65,
     quota: 588
   },
   {
     id: 18,
     name: "THPT Nguyễn Việt Hồng",
-    score: 17.75,
+    score: 21,
     quota: 400
   },
   {
     id: 19,
     name: "THPT Phan Ngọc Hiển",
-    score: 16.25,
+    score: 17.9,
     quota: 429
   },
   {
     id: 20,
     name: "THPT An Khánh",
-    score: 16.5,
+    score: 16.05,
     quota: 480
   },
   {
     id: 21,
     name: "THPT Lưu Hữu Phước",
-    score: 13.4,
+    score: 16.95,
     quota: 460
   },
   {
     id: 22,
     name: "THPT Lương Định Của",
-    score: 9.6,
+    score: 29,
     quota: 315
   },
   {
     id: 23,
     name: "THPT Thới Long",
-    score: 9,
+    score: 7.9,
     quota: 420
   },
   {
     id: 24,
     name: "THPT Thốt Nốt",
-    score: 14.05,
+    score: 14.35,
     quota: 630
   },
   {
     id: 25,
     name: "THPT Thuận Hưng",
-    score: 13.25,
+    score: 9.65,
     quota: 390
   },
   {
     id: 26,
     name: "THCS và THPT Thới Thuận",
-    score: 13.05,
+    score: 10.5,
     quota: 225
   },
   {
     id: 27,
     name: "THCS và THPT Tân Lộc",
-    score: 10.1,
+    score: 9.6,
     quota: 280
   },
   {
     id: 28,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Toán",
-    score: 31.95,
+    score: 41.2,
     quota: 455
   },
   {
     id: 90,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Vật lí",
-    score: 32.9,
+    score: 35.15,
     quota: 455
   },
   {
     id: 91,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Hóa học",
-    score: 37.8,
+    score: 39.1,
     quota: 455
   },
   {
     id: 92,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Sinh học",
-    score: 37.46,
+    score: 39.8,
     quota: 455
   },
   {
     id: 93,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tin học",
-    score: 34.15,
+    score: 36.15,
     quota: 455
   },
   {
     id: 94,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Ngữ văn",
-    score: 32.25,
+    score: 38.7,
     quota: 455
   },
   {
     id: 95,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Lịch sử",
-    score: 28.6,
+    score: 29.75,
     quota: 455
   },
   {
     id: 96,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Địa lí",
-    score: 31.3,
+    score: 24.85,
     quota: 455
   },
   {
     id: 97,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Anh",
-    score: 38.05,
+    score: 37.1,
     quota: 455
   },
   {
     id: 98,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Pháp",
-    score: 34.44,
+    score: 28.86,
     quota: 455
   },
   {
     id: 29,
     name: "THPT Vị Thanh",
-    score: 7.5,
+    score: 12.7,
     quota: 495
   },
   {
     id: 30,
     name: "THPT Chiêm Thành Tấn",
-    score: 8,
+    score: 8.45,
     quota: 315
   },
   {
     id: 31,
     name: "THPT Long Mỹ",
-    score: 18.25,
+    score: 10.2,
     quota: 765
   },
   {
     id: 32,
     name: "THPT Tân Phú",
-    score: 15.5,
+    score: 8.45,
     quota: 270
   },
   {
     id: 33,
     name: "PTDTNT Tỉnh (02 lớp dân tộc kinh)",
-    score: 13.75,
+    score: 6.8,
     quota: 400
   },
   {
     id: 34,
     name: "THPT Phú Hữu",
-    score: 16.75,
+    score: 28,
     quota: 315
   },
   {
     id: 35,
     name: "THPT Cái Tắc",
-    score: 9,
+    score: 32,
     quota: 450
   },
   {
     id: 36,
     name: "THPT Tầm Vu",
-    score: 15,
+    score: 32,
     quota: 400
   },
   {
     id: 37,
     name: "THPT Châu Thành A",
-    score: 17.75,
+    score: 34,
     quota: 405
   },
   {
     id: 38,
     name: "THPT Trường Long Tây",
-    score: 18.25,
+    score: 31,
     quota: 180
   },
   {
     id: 39,
     name: "THPT Tây Đô",
-    score: 8,
+    score: 8.65,
     quota: 240
   },
   {
     id: 40,
     name: "THPT Lương Tâm",
-    score: 18.75,
+    score: 11.15,
     quota: 240
   },
   {
     id: 41,
     name: "THPT Cây Dương (Điểm chính)",
-    score: 11.25,
+    score: 35,
     quota: 405
   },
   {
     id: 42,
     name: "THPT Cây Dương (Phân hiệu)",
-    score: 19.25,
+    score: 30,
     quota: 405
   },
   {
     id: 43,
     name: "THPT Lương Thế Vinh",
-    score: 15.5,
+    score: 32,
     quota: 315
   },
   {
     id: 44,
     name: "THPT Hoà An",
-    score: 8,
+    score: 28,
     quota: 180
   },
   {
     id: 45,
     name: "THPT Tân Long",
-    score: 21.5,
+    score: 32,
     quota: 270
   },
   {
     id: 46,
     name: "THPT Vị Thủy (Điểm chính)",
-    score: 16.75,
+    score: 9.45,
     quota: 450
   },
   {
     id: 47,
     name: "THPT Vị Thủy (Phân hiệu)",
-    score: 15.75,
+    score: 8.95,
     quota: 450
   },
   {
     id: 48,
     name: "THPT Lê Hồng Phong",
-    score: 7.75,
+    score: 32,
     quota: 270
   },
   {
     id: 49,
     name: "THPT Vĩnh Tường",
-    score: 18.25,
+    score: 27,
     quota: 180
   },
   {
     id: 50,
     name: "THPT Lê Quý Đôn",
-    score: 14,
+    score: 10,
     quota: 336
   },
   {
     id: 51,
     name: "THPT Nguyễn Minh Quang",
-    score: 19.25,
+    score: 28,
     quota: 405
   },
   {
     id: 52,
     name: "THPT DTNT Huỳnh Cương",
-    score: 32.3,
+    score: 17,
     quota: 210
   },
   {
     id: 53,
     name: "THPT Hoàng Diệu",
-    score: 32.5,
+    score: 17.9,
     quota: 630
   },
   {
     id: 54,
     name: "THPT Thành phố Sóc Trăng",
-    score: 19,
+    score: 8.4,
     quota: 600
   },
   {
     id: 55,
     name: "THPT Mai Thanh Thế",
-    score: 19,
+    score: 9.15,
     quota: 495
   },
   {
     id: 56,
     name: "THPT Lê Văn Tám",
-    score: 18,
+    score: 23,
     quota: 240
   },
   {
     id: 57,
     name: "THPT Ngã Năm",
-    score: 18.5,
+    score: 25,
     quota: 220
   },
   {
     id: 58,
     name: "THPT Vĩnh Hải",
-    score: 18.5,
+    score: 33,
     quota: 270
   },
   {
     id: 59,
     name: "THCS & THPT Lai Hòa",
-    score: 21,
+    score: 28,
     quota: 240
   },
   {
     id: 60,
     name: "THCS & THPT Dân tộc nội trú Vĩnh Châu",
-    score: 30.9,
+    score: 16.05,
     quota: 70
   },
   {
     id: 61,
     name: "THCS & THPT Khánh Hòa",
-    score: 20,
+    score: 9.9,
     quota: 230
   },
   {
     id: 62,
     name: "THPT Nguyễn Khuyến",
-    score: 19,
+    score: 11.45,
     quota: 440
   },
   {
     id: 63,
     name: "THPT An Ninh",
-    score: 19,
+    score: 30,
     quota: 240
   },
   {
     id: 64,
     name: "THPT Phú Tâm",
-    score: 19.5,
+    score: 8.15,
     quota: 290
   },
   {
     id: 65,
     name: "THPT Thuận Hòa",
-    score: 19,
+    score: 29,
     quota: 420
   },
   {
     id: 66,
     name: "THPT Đoàn Văn Tố",
-    score: 20.5,
+    score: 7.65,
     quota: 400
   },
   {
     id: 67,
     name: "THPT An Thạnh 3",
-    score: 20,
+    score: 6.25,
     quota: 220
   },
   {
     id: 68,
     name: "THPT An Lạc Thôn",
-    score: 19,
+    score: 8.8,
     quota: 349
   },
   {
     id: 69,
     name: "THPT Kế Sách",
-    score: 19,
+    score: 5.7,
     quota: 630
   },
   {
     id: 70,
     name: "THPT Phan Văn Hùng",
-    score: 21,
+    score: 5.9,
     quota: 310
   },
   {
     id: 71,
     name: "THPT Thiều Văn Chỏi",
-    score: 21,
+    score: 5.4,
     quota: 450
   },
   {
     id: 72,
     name: "THCS & THPT Dương Kỳ Hiệp",
-    score: 20,
+    score: 30,
     quota: 180
   },
   {
     id: 73,
     name: "THPT Lương Định Của (Sóc Trăng)",
-    score: 19.5,
+    score: 29,
     quota: 315
   },
   {
     id: 74,
     name: "THPT Đại Ngãi",
-    score: 19,
+    score: 25,
     quota: 405
   },
   {
     id: 75,
     name: "THCS & THPT Tân Thạnh",
-    score: 18,
+    score: 4.4,
     quota: 320
   },
   {
     id: 76,
     name: "THCS & THPT Long Hưng",
-    score: 20,
+    score: 23,
     quota: 164
   },
   {
     id: 77,
     name: "THPT Mỹ Hương",
-    score: 20,
+    score: 5.95,
     quota: 160
   },
   {
     id: 78,
     name: "THPT Huỳnh Hữu Nghĩa",
-    score: 18.5,
+    score: 8.6,
     quota: 330
   },
   {
     id: 79,
     name: "THCS & THPT Mỹ Thuận",
-    score: 19.5,
+    score: 26,
     quota: 210
   },
   {
     id: 80,
     name: "PTDTNT THCS & THPT Thạnh Phú",
-    score: 29,
+    score: 13.9,
     quota: 70
   },
   {
     id: 81,
     name: "THPT Mỹ Xuyên",
-    score: 18.5,
+    score: 9.2,
     quota: 520
   },
   {
     id: 82,
     name: "THPT Văn Ngọc Chính",
-    score: 19,
+    score: 8.85,
     quota: 300
   },
   {
     id: 83,
     name: "THPT Ngọc Tố",
-    score: 20,
+    score: 25,
     quota: 240
   },
   {
     id: 84,
     name: "THPT Hòa Tú",
-    score: 18,
+    score: 30,
     quota: 280
   },
   {
     id: 85,
     name: "THPT Trần Văn Bảy",
-    score: 20,
+    score: 8.7,
     quota: 602
   },
   {
     id: 86,
     name: "THPT Thạnh Tân",
-    score: 18,
+    score: 28,
     quota: 250
   },
   {
     id: 87,
     name: "THCS & THPT Hưng Lợi",
-    score: 20,
+    score: 28,
     quota: 160
   },
   {
     id: 88,
     name: "THPT Lịch Hội Thượng",
-    score: 19.5,
+    score: 10.15,
     quota: 360
   },
   {
     id: 89,
     name: "THCS & THPT Trần Đề",
-    score: 19,
+    score: 10.65,
     quota: 270
   },
   {
     id: 99,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Toán",
-    score: 35.35,
+    score: 33.7,
     quota: 350
   },
   {
     id: 100,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Vật lí",
-    score: 28.15,
+    score: 24.95,
     quota: 350
   },
   {
     id: 101,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Hóa học",
-    score: 30.35,
+    score: 34.85,
     quota: 350
   },
   {
     id: 102,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sinh học",
-    score: 30.55,
+    score: 31.26,
     quota: 350
   },
   {
     id: 103,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tin học",
-    score: 32.2,
+    score: 28.95,
     quota: 350
   },
   {
     id: 104,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Ngữ văn",
-    score: 32.3,
+    score: 35.15,
     quota: 350
   },
   {
     id: 105,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Lịch sử",
-    score: 35.6,
+    score: 24.7,
     quota: 350
   },
   {
     id: 106,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Địa lí",
-    score: 30.45,
+    score: 22.65,
     quota: 350
   },
   {
     id: 107,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tiếng Anh",
-    score: 33,
+    score: 28.6,
     quota: 350
   },
   {
     id: 108,
     name: "THPT Ô Môn",
-    score: 9.6,
+    score: 11.85,
     quota: 450
-  },
-  {
-    id: 201,
-    name: "Trường A (Test)",
-    score: 20,
-    quota: 100
-  },
-  {
-    id: 202,
-    name: "Trường B (Test)",
-    score: 21,
-    quota: 100
-  },
-  {
-    id: 203,
-    name: "Trường C (Test)",
-    score: 22,
-    quota: 100
-  },
-  {
-    id: 204,
-    name: "Trường D (Test)",
-    score: 23,
-    quota: 100
-  },
-  {
-    id: 205,
-    name: "Trường E (Test)",
-    score: 24,
-    quota: 100
-  },
-  {
-    id: 206,
-    name: "Trường F (Test)",
-    score: 25,
-    quota: 100
   },
   {
     id: 110,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Trung Quốc",
-    score: 30,
+    score: 21.3,
     quota: 455
   },
   {
     id: 111,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Toán",
-    score: 25,
+    score: 32.35,
     quota: 315
   },
   {
     id: 112,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Vật lí",
-    score: 25,
+    score: 25.95,
     quota: 315
   },
   {
     id: 113,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Hóa học",
-    score: 25,
+    score: 26.3,
     quota: 315
   },
   {
     id: 114,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Sinh học",
-    score: 25,
+    score: 27.8,
     quota: 315
   },
   {
     id: 115,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Tin học",
-    score: 25,
+    score: 33.65,
     quota: 315
   },
   {
     id: 116,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Ngữ văn",
-    score: 25,
+    score: 32.35,
     quota: 315
   },
   {
     id: 117,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Lịch sử",
-    score: 25,
+    score: 23.8,
     quota: 315
   },
   {
     id: 118,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Địa lí",
-    score: 25,
+    score: 23.7,
     quota: 315
   },
   {
     id: 119,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Tiếng Anh",
-    score: 25,
+    score: 28.35,
     quota: 315
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
