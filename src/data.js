@@ -3,7 +3,7 @@ export const highSchools = [
     id: 1,
     name: "THPT Hà Huy Giáp",
     score: 12,
-    quota: 520
+    quota: 502
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const highSchools = [
     id: 3,
     name: "THCS và THPT Trần Ngọc Hoằng",
     score: 25,
-    quota: 225
+    quota: 245
   },
   {
     id: 4,
@@ -27,19 +27,19 @@ export const highSchools = [
     id: 5,
     name: "THPT Giai Xuân",
     score: 8.5,
-    quota: 405
+    quota: 327
   },
   {
     id: 6,
     name: "THPT Thới Lai",
     score: 13.1,
-    quota: 630
+    quota: 675
   },
   {
     id: 7,
     name: "THCS và THPT Trường Xuân",
     score: 5.55,
-    quota: 225
+    quota: 214
   },
   {
     id: 8,
@@ -63,13 +63,13 @@ export const highSchools = [
     id: 11,
     name: "THCS và THPT Thạnh Thắng",
     score: 24,
-    quota: 180
+    quota: 125
   },
   {
     id: 12,
     name: "THPT Bùi Hữu Nghĩa",
     score: 20.35,
-    quota: 546
+    quota: 560
   },
   {
     id: 13,
@@ -87,43 +87,43 @@ export const highSchools = [
     id: 15,
     name: "THPT Trần Đại Nghĩa",
     score: 13.2,
-    quota: 540
+    quota: 483
   },
   {
     id: 16,
     name: "THPT Thực hành sư phạm - ĐHCT",
     score: 24,
-    quota: 216
+    quota: 246
   },
   {
     id: 17,
     name: "THPT Châu Văn Liêm",
     score: 23.65,
-    quota: 588
+    quota: 651
   },
   {
     id: 18,
     name: "THPT Nguyễn Việt Hồng",
     score: 21,
-    quota: 400
+    quota: 451
   },
   {
     id: 19,
     name: "THPT Phan Ngọc Hiển",
     score: 17.9,
-    quota: 429
+    quota: 454
   },
   {
     id: 20,
     name: "THPT An Khánh",
     score: 16.05,
-    quota: 480
+    quota: 423
   },
   {
     id: 21,
     name: "THPT Lưu Hữu Phước",
     score: 16.95,
-    quota: 460
+    quota: 495
   },
   {
     id: 22,
@@ -135,7 +135,7 @@ export const highSchools = [
     id: 23,
     name: "THPT Thới Long",
     score: 7.9,
-    quota: 420
+    quota: 440
   },
   {
     id: 24,
@@ -147,7 +147,7 @@ export const highSchools = [
     id: 25,
     name: "THPT Thuận Hưng",
     score: 9.65,
-    quota: 390
+    quota: 430
   },
   {
     id: 26,
@@ -165,61 +165,61 @@ export const highSchools = [
     id: 28,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Toán",
     score: 41.2,
-    quota: 455
+    quota: 70
   },
   {
     id: 90,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Vật lí",
     score: 35.15,
-    quota: 455
+    quota: 35
   },
   {
     id: 91,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Hóa học",
     score: 39.1,
-    quota: 455
+    quota: 35
   },
   {
     id: 92,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Sinh học",
     score: 39.8,
-    quota: 455
+    quota: 35
   },
   {
     id: 93,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tin học",
     score: 36.15,
-    quota: 455
+    quota: 35
   },
   {
     id: 94,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Ngữ văn",
     score: 38.7,
-    quota: 455
+    quota: 35
   },
   {
     id: 95,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Lịch sử",
     score: 29.75,
-    quota: 455
+    quota: 35
   },
   {
     id: 96,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Địa lí",
     score: 24.85,
-    quota: 455
+    quota: 35
   },
   {
     id: 97,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Anh",
     score: 37.1,
-    quota: 455
+    quota: 70
   },
   {
     id: 98,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Pháp",
     score: 28.86,
-    quota: 455
+    quota: 26
   },
   {
     id: 29,
@@ -249,7 +249,7 @@ export const highSchools = [
     id: 33,
     name: "PTDTNT Tỉnh (02 lớp dân tộc kinh)",
     score: 6.8,
-    quota: 400
+    quota: 50
   },
   {
     id: 34,
@@ -285,31 +285,31 @@ export const highSchools = [
     id: 39,
     name: "THPT Tây Đô",
     score: 8.65,
-    quota: 240
+    quota: 270
   },
   {
     id: 40,
     name: "THPT Lương Tâm",
     score: 11.15,
-    quota: 240
+    quota: 270
   },
   {
     id: 41,
     name: "THPT Cây Dương (Điểm chính)",
     score: 35,
-    quota: 405
+    quota: 270
   },
   {
     id: 42,
     name: "THPT Cây Dương (Phân hiệu)",
     score: 30,
-    quota: 405
+    quota: 135
   },
   {
     id: 43,
     name: "THPT Lương Thế Vinh",
     score: 32,
-    quota: 315
+    quota: 336
   },
   {
     id: 44,
@@ -327,13 +327,13 @@ export const highSchools = [
     id: 46,
     name: "THPT Vị Thủy (Điểm chính)",
     score: 9.45,
-    quota: 450
+    quota: 360
   },
   {
     id: 47,
     name: "THPT Vị Thủy (Phân hiệu)",
     score: 8.95,
-    quota: 450
+    quota: 90
   },
   {
     id: 48,
@@ -351,7 +351,7 @@ export const highSchools = [
     id: 50,
     name: "THPT Lê Quý Đôn",
     score: 10,
-    quota: 336
+    quota: 405
   },
   {
     id: 51,
@@ -369,7 +369,7 @@ export const highSchools = [
     id: 53,
     name: "THPT Hoàng Diệu",
     score: 17.9,
-    quota: 630
+    quota: 800
   },
   {
     id: 54,
@@ -381,19 +381,19 @@ export const highSchools = [
     id: 55,
     name: "THPT Mai Thanh Thế",
     score: 9.15,
-    quota: 495
+    quota: 540
   },
   {
     id: 56,
     name: "THPT Lê Văn Tám",
     score: 23,
-    quota: 240
+    quota: 242
   },
   {
     id: 57,
     name: "THPT Ngã Năm",
     score: 25,
-    quota: 220
+    quota: 270
   },
   {
     id: 58,
@@ -405,7 +405,7 @@ export const highSchools = [
     id: 59,
     name: "THCS & THPT Lai Hòa",
     score: 28,
-    quota: 240
+    quota: 330
   },
   {
     id: 60,
@@ -417,43 +417,43 @@ export const highSchools = [
     id: 61,
     name: "THCS & THPT Khánh Hòa",
     score: 9.9,
-    quota: 230
+    quota: 270
   },
   {
     id: 62,
     name: "THPT Nguyễn Khuyến",
     score: 11.45,
-    quota: 440
+    quota: 540
   },
   {
     id: 63,
     name: "THPT An Ninh",
     score: 30,
-    quota: 240
+    quota: 286
   },
   {
     id: 64,
     name: "THPT Phú Tâm",
     score: 8.15,
-    quota: 290
+    quota: 325
   },
   {
     id: 65,
     name: "THPT Thuận Hòa",
     score: 29,
-    quota: 420
+    quota: 480
   },
   {
     id: 66,
     name: "THPT Đoàn Văn Tố",
     score: 7.65,
-    quota: 400
+    quota: 440
   },
   {
     id: 67,
     name: "THPT An Thạnh 3",
     score: 6.25,
-    quota: 220
+    quota: 222
   },
   {
     id: 68,
@@ -465,19 +465,19 @@ export const highSchools = [
     id: 69,
     name: "THPT Kế Sách",
     score: 5.7,
-    quota: 630
+    quota: 660
   },
   {
     id: 70,
     name: "THPT Phan Văn Hùng",
     score: 5.9,
-    quota: 310
+    quota: 301
   },
   {
     id: 71,
     name: "THPT Thiều Văn Chỏi",
     score: 5.4,
-    quota: 450
+    quota: 490
   },
   {
     id: 72,
@@ -495,37 +495,37 @@ export const highSchools = [
     id: 74,
     name: "THPT Đại Ngãi",
     score: 25,
-    quota: 405
+    quota: 450
   },
   {
     id: 75,
     name: "THCS & THPT Tân Thạnh",
     score: 4.4,
-    quota: 320
+    quota: 309
   },
   {
     id: 76,
     name: "THCS & THPT Long Hưng",
     score: 23,
-    quota: 164
+    quota: 180
   },
   {
     id: 77,
     name: "THPT Mỹ Hương",
     score: 5.95,
-    quota: 160
+    quota: 166
   },
   {
     id: 78,
     name: "THPT Huỳnh Hữu Nghĩa",
     score: 8.6,
-    quota: 330
+    quota: 395
   },
   {
     id: 79,
     name: "THCS & THPT Mỹ Thuận",
     score: 26,
-    quota: 210
+    quota: 192
   },
   {
     id: 80,
@@ -537,7 +537,7 @@ export const highSchools = [
     id: 81,
     name: "THPT Mỹ Xuyên",
     score: 9.2,
-    quota: 520
+    quota: 540
   },
   {
     id: 82,
@@ -549,37 +549,37 @@ export const highSchools = [
     id: 83,
     name: "THPT Ngọc Tố",
     score: 25,
-    quota: 240
+    quota: 226
   },
   {
     id: 84,
     name: "THPT Hòa Tú",
     score: 30,
-    quota: 280
+    quota: 315
   },
   {
     id: 85,
     name: "THPT Trần Văn Bảy",
     score: 8.7,
-    quota: 602
+    quota: 630
   },
   {
     id: 86,
     name: "THPT Thạnh Tân",
     score: 28,
-    quota: 250
+    quota: 290
   },
   {
     id: 87,
     name: "THCS & THPT Hưng Lợi",
     score: 28,
-    quota: 160
+    quota: 180
   },
   {
     id: 88,
     name: "THPT Lịch Hội Thượng",
     score: 10.15,
-    quota: 360
+    quota: 405
   },
   {
     id: 89,
@@ -591,55 +591,55 @@ export const highSchools = [
     id: 99,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Toán",
     score: 33.7,
-    quota: 350
+    quota: 70
   },
   {
     id: 100,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Vật lí",
     score: 24.95,
-    quota: 350
+    quota: 29
   },
   {
     id: 101,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Hóa học",
     score: 34.85,
-    quota: 350
+    quota: 35
   },
   {
     id: 102,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Sinh học",
     score: 31.26,
-    quota: 350
+    quota: 35
   },
   {
     id: 103,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tin học",
     score: 28.95,
-    quota: 350
+    quota: 25
   },
   {
     id: 104,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Ngữ văn",
     score: 35.15,
-    quota: 350
+    quota: 35
   },
   {
     id: 105,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Lịch sử",
     score: 24.7,
-    quota: 350
+    quota: 17
   },
   {
     id: 106,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Địa lí",
     score: 22.65,
-    quota: 350
+    quota: 9
   },
   {
     id: 107,
     name: "Trường THPT chuyên Nguyễn Thị Minh Khai - Chuyên Tiếng Anh",
     score: 28.6,
-    quota: 350
+    quota: 58
   },
   {
     id: 108,
@@ -651,61 +651,61 @@ export const highSchools = [
     id: 110,
     name: "Trường THPT chuyên Lý Tự Trọng - Chuyên Tiếng Trung Quốc",
     score: 21.3,
-    quota: 455
+    quota: 15
   },
   {
     id: 111,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Toán",
     score: 32.35,
-    quota: 315
+    quota: 35
   },
   {
     id: 112,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Vật lí",
     score: 25.95,
-    quota: 315
+    quota: 35
   },
   {
     id: 113,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Hóa học",
     score: 26.3,
-    quota: 315
+    quota: 21
   },
   {
     id: 114,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Sinh học",
     score: 27.8,
-    quota: 315
+    quota: 35
   },
   {
     id: 115,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Tin học",
     score: 33.65,
-    quota: 315
+    quota: 4
   },
   {
     id: 116,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Ngữ văn",
     score: 32.35,
-    quota: 315
+    quota: 35
   },
   {
     id: 117,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Lịch sử",
     score: 23.8,
-    quota: 315
+    quota: 20
   },
   {
     id: 118,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Địa lí",
     score: 23.7,
-    quota: 315
+    quota: 35
   },
   {
     id: 119,
     name: "Trường THPT chuyên Vị Thanh - Chuyên Tiếng Anh",
     score: 28.35,
-    quota: 315
+    quota: 30
   }
 ].sort((a, b) => a.name.localeCompare(b.name));
 
