@@ -288,7 +288,7 @@ export const highSchools = [
   },
   {
     id: 33,
-    name: "PTDTNT Tỉnh (02 lớp dân tộc kinh)",
+    name: "Trường PTDTNT THPT Hậu Giang",
     score: 6.8,
     quota: 50,
     nv3Quota: 55
