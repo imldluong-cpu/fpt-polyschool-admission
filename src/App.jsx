@@ -22,20 +22,26 @@ function App() {
   const introRef = useRef(null);
   const quizRef = useRef(null);
 
-  const schoolData = highSchools.find(s => s.id === Number(selectedSchool));
+  const schoolData = selectedSchool ? highSchools.find(s => s.id === Number(selectedSchool)) : null;
 
   let passStatus = null;
   let suggestedSchools = [];
-  if (schoolData && myScore) {
+  
+  if (myScore) {
     const userScore = Number(myScore);
-    if (userScore >= schoolData.score) {
-      passStatus = "Đậu";
-    } else {
-      passStatus = "Rớt";
-      
-      // Suggest up to 5 schools with score <= userScore and nv3Quota > 0 (excluding the selected one and test schools)
+    
+    if (schoolData) {
+      if (userScore >= schoolData.score) {
+        passStatus = "Đậu";
+      } else {
+        passStatus = "Rớt";
+      }
+    }
+    
+    // Suggest schools if no school is selected or if the user failed the selected school
+    if (!schoolData || passStatus === "Rớt") {
       suggestedSchools = highSchools
-        .filter(s => s.id !== schoolData.id && s.score <= userScore && s.nv3Quota > 0 && !s.name.includes("Test"))
+        .filter(s => (!schoolData || s.id !== schoolData.id) && s.score <= userScore && s.nv3Quota > 0 && !s.name.includes("Test"))
         .sort((a, b) => b.score - a.score) 
         .slice(0, 5);
     }
@@ -43,7 +49,7 @@ function App() {
 
   const handleLookup = (e) => {
     e.preventDefault();
-    if (selectedSchool && myScore) {
+    if (myScore) {
       setShowAllSuggestions(false);
       setShowModal(true);
     }
@@ -166,13 +172,16 @@ function App() {
         <div className="modal-overlay">
           <div className="modal-content" style={{ maxHeight: '90vh', overflowY: 'auto' }}>
             <h2>Kết quả tuyển sinh 2026</h2>
-            <div className="result-box" style={{ margin: '20px 0', textAlign: 'center', borderRadius: '8px' }}>
-              <p style={{ margin: 0, fontSize: '1.1rem', color: '#666' }}>Trường {schoolData?.name}</p>
-              <div className="score-display" style={{ fontSize: '2.5rem', margin: '10px 0' }}>
-                {schoolData?.score.toFixed(2)}
+            
+            {schoolData && (
+              <div className="result-box" style={{ margin: '20px 0', textAlign: 'center', borderRadius: '8px' }}>
+                <p style={{ margin: 0, fontSize: '1.1rem', color: '#666' }}>Trường {schoolData.name}</p>
+                <div className="score-display" style={{ fontSize: '2.5rem', margin: '10px 0' }}>
+                  {schoolData.score.toFixed(2)}
+                </div>
+                <p style={{ margin: 0, fontWeight: 'bold' }}>Chỉ tiêu 2026: {schoolData.quota} học sinh</p>
               </div>
-              <p style={{ margin: 0, fontWeight: 'bold' }}>Chỉ tiêu 2026: {schoolData?.quota} học sinh</p>
-            </div>
+            )}
 
             {passStatus === "Đậu" && (
               <div style={{ textAlign: 'center', padding: '20px', backgroundColor: '#e6ffe6', borderRadius: '8px', border: '1px solid #22c55e' }}>
@@ -187,7 +196,11 @@ function App() {
                   <h3 style={{ color: '#dc2626', margin: 0, fontSize: '1.3rem' }}>Rất tiếc!</h3>
                   <p style={{ marginTop: '10px' }}>Điểm thi của bạn chưa đủ để trúng tuyển vào {schoolData?.name}.</p>
                 </div>
-                
+              </div>
+            )}
+            
+            {(!schoolData || passStatus === "Rớt") && (
+              <div style={{ textAlign: 'center' }}>
                 <h3 style={{ textAlign: 'left', borderBottom: '2px solid #eaeaea', paddingBottom: '10px' }}>🎯 Gợi ý trường phù hợp đăng ký NV3:</h3>
                 <ul style={{ listStyle: 'none', padding: 0, textAlign: 'left' }}>
                   {suggestedSchools.slice(0, showAllSuggestions ? 5 : 2).map((s, index) => (
